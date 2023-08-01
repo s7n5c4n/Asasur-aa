@@ -1,0 +1,248 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    margin-top: 60px; 
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fffcfc;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    z-index: 1000; /* Asegura que el encabezado esté siempre por encima del contenido */
+}
+#logo {
+    width: 150px; /* Ajusta el tamaño del logotipo según tus necesidades */
+    margin-right: 1rem;
+}
+#whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#whatsapp-button img {
+    width: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: whatsappWave 4s infinite;
+}
+#whatsapp-button a {
+    display: inline-block;
+    transition: 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+#whatsapp-button a:hover {
+    transform: scale(1.2); /* Efecto de escala al pasar el cursor */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Agrega una sombra más pronunciada */
+}
+
+#whatsapp-button a:active {
+    transform: scale(1.1); /* Efecto de escala al hacer clic */
+}
+
+@keyframes whatsappWave {
+    0%, 100% {
+        transform: scale(1.4);
+    }
+    40% {
+        transform: scale(1.5) rotate(50deg);
+    }
+}
+h1 {
+    margin: 0;
+    text-align: center;
+}
+#products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1rem;
+}
+.product-card {
+    width: 250px;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#how-to-buy {
+    padding: 2rem;
+    background-color: #f9f9f9;
+}
+#how-to-buy h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+#how-to-buy p {
+    line-height: 1.6;
+}
+#how-to-buy ol {
+    list-style: none;
+    padding: 0;
+    counter-reset: step;
+}
+#how-to-buy ol li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 1rem;
+}
+#how-to-buy ol li::before {
+    content: counter(step);
+    counter-increment: step;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4285F4;
+    border-radius: 50%;
+    transform: translateY(50%);
+}
+#how-to-buy p:last-child {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+/* Animación de aparición */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#how-to-buy li,
+#how-to-buy p:last-child {
+    animation: fadeInUp 1s ease;
+}
+#contact {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    text-align: center;
+}
+h2 {
+    margin-bottom: 1rem;
+}
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+input,
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+#contact-info {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+.contact-item {
+    flex: 1;
+    margin: 0 1rem;
+}
+.contact-item h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+button:hover {
+    background-color: #444;
+}
+button:active {
+    background-color: #222;
+}
+#other-pages {
+    padding: 1rem;
+    background-color: white;
+    text-align: center;
+}
+#other-pages h2 {
+    margin-bottom: 1rem;
+    color: #333; /* Color más oscuro para el título */
+}
+#other-pages ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#other-pages li {
+    display: inline-block;
+    margin-right: 20px;
+}
+#other-pages li:last-child {
+    margin-right: 0;
+}
+#other-pages a {
+    text-decoration: none;
+    color: #fff; /* Color del texto de los enlaces */
+    background-color: #4285F4; /* Color de fondo más vibrante */
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+#other-pages a:hover {
+    background-color: #3b76cd; /* Color de fondo más oscuro al pasar el cursor */
+}
+#about-us,
+#work-with-us {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+#about-us h2,
+#work-with-us h2 {
+    margin-bottom: 1.5rem;
+}
+#about-us p,
+#work-with-us p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+#work-with-us p:last-child {
+    margin-bottom: 0;
+}
+/* Estilos para los botones de "Trabaja con Nosotros" */
+#work-with-us button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    background-color: #4285F4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#work-with-us button:hover {
+    background-color: #377ae6;
+}
